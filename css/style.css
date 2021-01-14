@@ -2,6 +2,7 @@
     --base-font: "Gotham Rounded A", "Gotham Rounded B", "Gotham Rounded", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --background-color: #3f8abf;
     --text-color:  #fff;
+    --test-color: rgb(33, 245, 33);
 
 }
 
@@ -15,21 +16,16 @@ body {
   main {
     width: 90%;
     max-width: 1080px;
-    padding: 60px 0 0;
+    padding: 10px;
     margin: 0 auto;
+    background-color: var(--background-color);
   }
   
-  main div {
-    color: var(--background-color);
-    font-weight: 500;
-    font-size: 1.25em;
+  .quote {
+    color: var(--text-color);
     text-align: center;
     line-height: 58px;
-    width: 55px;
-    height: 55px;
-    display: inline-block;
-    background-color: white;
-    border-radius: 50%;
+    background-color: var(--background-color);
     margin: 0.5em;
   }
   
@@ -41,10 +37,32 @@ body {
   
   h2 {
     font-size: 2.5em;
-    font-weight: normal;
+    font-weight: 500;
   }
   
   p {
-    font-size: 2em;
+    font-size: 1.5em;
     line-height: 0.8;
+  }
+
+  .button-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 75px;
+    top: 400px;
+  }
+
+  button {
+    background-color: #fff;
+    color:#3f8abf;
+    border: 5px solid #fff;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.5em;
+  }
+
+  #source {
+    text-align: right;
   }
