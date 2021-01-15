@@ -91,12 +91,43 @@ function getRandomQuote(quoteNumber) {
 //printQuote populates the HTML with the values from the quotes object.  It is called with the eventHandler built
 //into the button on the page is clicked. 
 function printQuote() {
-    document.getElementById('quote').innerHTML = `<h3>${quoteObject.quote}</h3>`;
-    document.getElementById('source').innerHTML = `<p>-${quoteObject.source}</p>`;
-    document.getElementById('citation').innerHTML = `<p><em>${quoteObject.citation}</em></p>`;
-    document.getElementById('year').innerHTML = quoteObject.year;
-    document.getElementById('tags').innerHTML = `tags: ${quoteObject.tags}`;
-    // if ( === undefined) {
-
-    // }
+    //local variables for printQuote to display values from each key:value pair in the object. 
+    let quote = quoteObject.quote;
+    let source = quoteObject.source;
+    let citation = quoteObject.citation;
+    let year = quoteObject.year;
+    let tags = quoteObject.tags
+    document.getElementById('quote').innerHTML = `${quote}`;
+    document.getElementById('source').innerHTML = `<p>-${source}</p>`;
+   //These conditional statements ensure that a value is only displayed if a key:value pair exists for the object
+   //selected by getRandomQuote.  If the key:value pair is non-existent, nothing is displayed.  
+    if ( citation === undefined) {
+        document.getElementById('citation').innerHTML = " ";
+    } else {
+        document.getElementById('citation').innerHTML =`<p><em>${citation}</em></p>`;
+    };
+    if ( year === undefined) {
+        document.getElementById('year').innerHTML = " ";
+    } else {
+        document.getElementById('year').innerHTML =`<p><em>${year}</em></p>`;
+    };
+    if ( tags === undefined) {
+        document.getElementById('tags').innerHTML = " ";
+    } else {
+        document.getElementById('tags').innerHTML =`<p><em>${tags}</em></p>`;
+    };
 }
+
+let mainBackgroundColor = '';
+
+function randomColor() {
+    red = Math.floor(Math.random() * 256);
+    green = Math.floor(Math.random() * 256);
+    blue = Math.floor(Math.random() * 256);
+    randomRGB = `rgb(${red}, ${green}, ${blue}, 0.25)`;
+    return randomRGB;
+}
+
+console.log(randomColor());
+
+document.querySelector('main').style.background =  randomColor(); 
