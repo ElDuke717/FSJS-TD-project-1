@@ -118,16 +118,26 @@ function printQuote() {
     };
 }
 
+// function returnQuote() {
+//     return printQuote;
+// }
+
 let mainBackgroundColor = '';
 
 function randomColor() {
     red = Math.floor(Math.random() * 256);
     green = Math.floor(Math.random() * 256);
     blue = Math.floor(Math.random() * 256);
-    randomRGB = `rgb(${red}, ${green}, ${blue}, 0.25)`;
-    return randomRGB;
+    randomRGB = `rgb(${red}, ${green}, ${blue}, 0.75)`;
+    return document.querySelector('main').style.background =randomRGB;
 }
 
-console.log(randomColor());
+// document.querySelector('main').style.background =  randomColor(); 
 
-document.querySelector('main').style.background =  randomColor(); 
+function onClick() {
+    randomColor();
+    getRandomQuote();
+    printQuote();
+} 
+
+setInterval(onClick, 5000)  
