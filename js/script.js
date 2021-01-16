@@ -124,10 +124,6 @@ document.getElementById('quote-box').innerHTML = printQuote();
 
 let randomQuote = getRandomQuote();
 
-if (randomQuote.year === undefined) {
-    return "" } else { return console.log(randomQuote.year + `poop`)};
-
-
 
 /***
  * click event listener for the print quote button
