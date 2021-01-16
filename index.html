@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Random Quote Generator</title>
-</head>
-<body>
+    <title>Random Quotes</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+
+  <body>
     <header>
-        <h1>Random Quote Generator</h1>
+      <h1>Random Quotes</h1>
+      <button id="load-quote" class="load-quote">Show another quote</button>
     </header>
-    <main>
-        <div class="quoteItem" id="quote"></div>
-        <div class="quoteItem" id="source"></div>
-        <div class="quoteItem" id="citation"></div>
-        <div class="quoteItem" id="year"></div>
-        <div class="quoteItem" id="tags"></div>
-    </main>
-    <div class="button-box">
-        <button type="button" onclick="printQuote()">Press Here for a Random Quote</button>
+
+    <div class="container">
+      <div id="quote-box" class="quote-box">
+        <p class="quote">Every great developer you know got there by solving problems they were unqualified to solve until they actually did it.</p>
+        <p class="source">Patrick McKenzie<span class="citation">Twitter</span><span class="year">2016</span></p>
+      </div>
     </div>
-    <script src="js/app.js"></script>
-</body>
+    
+    <script src="js/script.js"></script>
+  </body>
 </html>
