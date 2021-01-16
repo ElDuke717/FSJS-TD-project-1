@@ -104,7 +104,7 @@ function printQuote() {
   let randomQuote = getRandomQuote();
   let quote = randomQuote.quote;
   let source = randomQuote.source;
-  let citation = randomQuote.citation === undefined ? "" : randomQuote.citation;
+  let citation = randomQuote.citation === undefined ? "": randomQuote.citation;
   let year = randomQuote.year === undefined ? "" : randomQuote.year;
   let tags = randomQuote.tags === undefined ? "" : randomQuote.tags;
   let htmlString = 
@@ -121,6 +121,12 @@ function printQuote() {
 console.log(printQuote());
 
 document.getElementById('quote-box').innerHTML = printQuote(); 
+
+let randomQuote = getRandomQuote();
+
+if (randomQuote.year === undefined) {
+    return "" } else { return console.log(randomQuote.year + `poop`)};
+
 
 
 /***
