@@ -123,7 +123,7 @@ function printQuote() {
   //htmlString is set to contain the template literal that uses interpolation to pull in the variables set for each object's property.  
   let htmlString = 
   `<p class="quote"> ${quote} </p>
-  <p class="source"> ${source}</p>
+  <p class="source"> ${source}
     <span class="citation"> ${citation} </span>
     <span class="year"> ${year} </span>
     <span class="tags"> ${tags} </span>
