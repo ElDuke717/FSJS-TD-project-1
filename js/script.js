@@ -141,7 +141,7 @@ function randomColor() {
     green = Math.floor(Math.random() * 256);
     blue = Math.floor(Math.random() * 256);
     randomRGB = `rgb(${red}, ${green}, ${blue}, 0.75)`;
-    return document.querySelector('.container').style.background = randomRGB;
+    return document.querySelector('body').style.background = randomRGB;
 }
 
 

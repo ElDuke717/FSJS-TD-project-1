@@ -106,7 +106,7 @@ h1 {
 }
 
 .citation:before {
-  content: "  ";
+  content: " ";
   font-style: normal;
 }
 
